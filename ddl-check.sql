@@ -11,6 +11,8 @@ CREATE TABLE Product(
   );
   
   CREATE TABLE Orders(
+    Customer_id VARCHAR2(20),
+    Product_id VARCHAR2(20),
     FOREIGN KEY (Customer_id) REFERENCES Customer(Customer_id),
     FOREIGN KEY (Product_id) REFERENCES Product(Product_id),
     Quantity NUMBER,
